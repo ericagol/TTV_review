@@ -1,0 +1,246 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% template for chapters to the Handbook of Exoplanets
+% modified by H. Deeg from the 'template.tex' provided by Springer for the svmult.cls class
+% 20Mar 2016
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox,natbib,nosecnum]{svmult}
+\bibpunct{(}{)}{;}{a}{}{,} % suppress commas between author-names and year
+
+\pdfoutput=1   %forces use of pdflatex. Disable if you prefer to use .eps or .ps figures.
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}       % selects Times Roman as basic font
+\usepackage{helvet}         % selects Helvetica as sans-serif font
+\usepackage{courier}        % selects Courier as typewriter font
+\usepackage{type1cm}        % activate if the above 3 fonts are
+                            % not available on your system
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+\usepackage[normalem]{ulem}	% for strike-through of text with \sout{}  
+\usepackage{hyperref}  %for hyperlinks
+
+\usepackage{soul}   % for high-lighting of text
+% see the list of further useful packages
+% in the Reference Guide
+
+% expansions of  journal abbreviations from bibtex entries by ADS
+% adapted to Springer Basic style (no periods in abbreviations)
+\newcommand*\aap{A\&A}
+\let\astap=\aap
+\newcommand*\aapr{A\&A Rev}
+\newcommand*\aaps{A\&AS}
+\newcommand*\actaa{Acta Astron}
+\newcommand*\aj{AJ}
+\newcommand*\ao{Appl Opt}
+\let\applopt\ao
+\newcommand*\apj{ApJ}
+\newcommand*\apjl{ApJ}
+\let\apjlett\apjl
+\newcommand*\apjs{ApJS}
+\let\apjsupp\apjs
+\newcommand*\aplett{Astrophys Lett}
+\newcommand*\apspr{Astrophys Space Phys Res}
+\newcommand*\apss{Ap\&SS}
+\newcommand*\araa{ARA\&A}
+\newcommand*\azh{AZh}
+\newcommand*\baas{BAAS}
+\newcommand*\bac{Bull astr Inst Czechosl}
+\newcommand*\bain{Bull Astron Inst Netherlands}
+\newcommand*\caa{Chinese Astron Astrophys}
+\newcommand*\cjaa{Chinese J Astron Astrophys}
+\newcommand*\fcp{Fund Cosmic Phys}
+\newcommand*\gca{Geochim Cosmochim Acta}
+\newcommand*\grl{Geophys Res Lett}
+\newcommand*\iaucirc{IAU Circ}
+\newcommand*\icarus{Icarus}
+\newcommand*\jcap{J Cosmology Astropart Phys}
+\newcommand*\jcp{J Chem Phys}
+\newcommand*\jgr{J Geophys Res}
+\newcommand*\jqsrt{J Quant Spectr Rad Transf}
+\newcommand*\jrasc{JRASC}
+\newcommand*\memras{MmRAS}
+\newcommand*\memsai{Mem Soc Astron Italiana}
+\newcommand*\mnras{MNRAS}
+\newcommand*\na{New A}
+\newcommand*\nar{New A Rev}
+\newcommand*\nat{Nature}
+\newcommand*\nphysa{Nucl Phys A}
+\newcommand*\pasa{PASA}
+\newcommand*\pasj{PASJ}
+\newcommand*\pasp{PASP}
+\newcommand*\physrep{Phys Rep}
+\newcommand*\physscr{Phys Scr}
+\newcommand*\planss{Planet Space Sci}
+\newcommand*\pra{Phys Rev A}
+\newcommand*\prb{Phys Rev B}
+\newcommand*\prc{Phys Rev C}
+\newcommand*\prd{Phys Rev D}
+\newcommand*\pre{Phys Rev E}
+\newcommand*\prl{Phys Rev Lett}
+\newcommand*\procspie{Proc SPIE}
+\newcommand*\qjras{QJRAS}
+\newcommand*\rmxaa{Rev Mexicana Astron Astrofis}
+\newcommand*\skytel{S\&T}
+\newcommand*\solphys{Sol Phys}
+\newcommand*\sovast{Soviet Ast}
+\newcommand*\ssr{Space Sci Rev}
+\newcommand*\zap{ZAp}
+
+
+\newcommand{\hbindex}[1]{\hl{#1}\index{#1}}  %highlights index entries
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title*{Title: Transit Timing and Duration Variations for Discovery and Characterization of Exoplanets}
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\author{Eric Agol and Dan C.\ Fabrycky}
+% Use 
+\authorrunning{Transit timing} % for an abbreviated version of
+% your contribution title if the original one is too long
+\institute{Eric Agol \at Department of Astronomy, Box 351580, University of Washington, Seattle, WA 98195-1580, USA \email{agol@uw.edu}
+\and Dan C.\ Fabrycky \at Dept.\ of Astronomy \& Astrophysics, University of Chicago, Chicago, IL 60637, USA \email{fabrycky@uchicago.edu}}
+%
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
+\maketitle
+
+
+\abstract{Transiting exoplanets in multi-planet systems have non-Keplerian orbits which can cause the times and durations of transits to vary.  We review the theory and observations of transit timing variations (TTV) and transit duration variations (TDV).}
+
+\section{Introduction}
+
+  - Non-Keplerian perturbations [DF]
+  - Uranus/Neptune (Leverrier/Adams) [DF]
+  - Discovery of transits - refer to other chapters [DF]
+  - Definition of TTVs/TDVs [DF] (Figure? O-C method)
+     \citep{2005Sci...307.1288H,2010Sci...330...51H}
+  - History: theory, observation  (Schneider TTV, Miralda-Escude' TTV) [EA]
+     \citep{2002ApJ...564.1019M,2010Sci...330...51H}
+\section{Preliminaries}
+
+  - Basic scalings: $\propto$P, $\propto m/M_{star}$ for the perturber, stronger near resonance [EA]
+  - Energy/angular momentum conservation [DF]
+  - Linear TTV (independently adds from different planets, off resonance)  - 
+  - Applications: [EA]
+    - Detection
+    - Confirmation
+    - Characterization
+      - Sensitive to density since time-dependent: transits are sensitive to density of star; TTV are sensitive to mass ratio; transit depth radius ratio - so we get density of planet from transits + TTV.   Dimensions of G are density and time.
+      - TTV + RV gives Mass + radius ;   CBPs as example  
+
+\section{Theory} % (applied to specific systems - show fits to actual data - either N-body or analytic)
+  - TTVs:
+    - Inner Keplerian variation;  CBPs as example (Kepler-16) [DF]
+    - Near-resonant TTVs - Lithwick et al.  [DF] (Figure - mechanism + data)
+       - Degeneracy - multiple resonances can give same solution (Kepler-19); Breaking degeneracy with TDV as well [DF]
+    - Chopping/other harmonics - KOI 1353 / KOI-872 [EA] (Figure)
+    - Resonance - Kepler-30?  Ne'svorny (1603.07306); Boue'+2012 - Kepler-223 (resonant chain - to fit data \& stability); room for more work on this.  [DF]
+    - Exomoons [EA]
+    - Light time?  Borkovits deconvolution [DF]
+    - Borkovits(?) - KOI 1474 {cleaner example?  Or leave out?  Future -- circumstellar planets in binaries; Schwartz et al. w/ Haghighipour.} [DF]     - TDVs
+       - Precession - Kepler-108 {1606.04485} / KOI-142 {Nesvorny} / KOI-13 (Mazeh) - and CBPs turning on or off.  [DF]  Ragozzine/Wolf/Pal/Koscis/Jordan - GR precession - Heyl \& Gladman; J2  (Figure - CBP? - Kepler-47? Kostov? Kepler-35? Try them out.)
+    - Exomoons [EA]
+
+\section{Observations/Practical considerations} % [EA]
+Confirmation of multi-planet systems in Kepler anti-correlated sinusoids, Ford GPs [DF]
+  [ Some firsts to history section; some best-cases as examples in theory section ]
+  - Timing precision: [EA]
+     - Comes from steepest part of lightcurve ingress/egress
+     - Signal-to-noise of TTV/TDV measurements (Carter/Winn; Rogers/Page)
+     - Finite-exposure time effects
+     - Effects of stellar variability: flux variability, star spots.
+
+\section{Science Results}
+    - Best characterization, specifically mass: Kepler-36 - conjunctions/impulse/Hill approximation (N-body) [EA]
+    - Other favorite systems? Kepler-11 puffy/packed planets  [DF]
+    - Best eccentricity constraint for a super-Earth?  Kepler-36? Include? 
+    - Ensemble TTV analysis: Xie - differing architecture for the single-transiters due to less frequent TTV, Hadden-Lithwick - eccentricity distribution; Hot Jupiters lonely (Steffen); Latham     - gas giants less frequent in multi-transiting (no TTVs)  [DF]
+    - Measuring masses - Steffen bias?    [DF]
+    - N-body modeling of Kepler-systems: Jontof-Hutter  [DF] (Mass-radius Figure? - ask Daniel Jontof-Hutter)  Transparency to avoid big error bars visually dominating.  EA will make the figure.  Referenced Wayne Hu figure on cosmo constraints.
+    - CBPs   [DF]
+
+\section{Future} %  [Might have to chop, or at least briefly cover.  Assign at that time!]
+  - More thorough TTV analysis: GPs - for measuring transit times
+  - Follow-up of Kepler targets
+  - Comparison of TTV masses with RV masses:  better constraints
+    and confidence in both methods?
+  - MCMC with high-multiplicity systems
+  - TESS, JWST, CHEOPS, PLATO, ?
+  - TTV/TDV of exomoons
+  - HZ exoplanets
+  - Smaller CBPs
+  - Stellar/planet characterization: TTV + RV
+
+References:
+
+Borucki \& Summers
+Struve
+Dobrovolskis \& Borucki (1996) - DPS, AAS
+Miralda-Escude
+Schneider
+Cabrera
+Charbonneau 2000
+
+Neptune:
+Bouvard/Adams/Le Verrier/Galle
+
+%% For figures use
+%\begin{figure}
+%% Use the relevant command for your figure-insertion program
+%% to insert the figure file.
+%% For example, with the graphicx style use
+%\includegraphics[scale=.65]{template_fig1}
+%%
+%\caption{Example figure. You do not have to worry on the layout as this will be revised by Springer}
+%\label{fig:1}       % Give a unique label
+%\end{figure}
+
+%\begin{table}
+%\caption{Please write your table caption here.}
+%\label{tab:1}       % Give a unique label
+%%
+%% Follow this input for your own table layout
+%%
+%\begin{tabular}{p{2cm}p{2.4cm}p{2cm}p{4.9cm}}
+%\hline\noalign{\smallskip}
+%Classes & Subclass & Length & Action Mechanism  \\
+%\noalign{\smallskip}\svhline\noalign{\smallskip}
+%Translation & mRNA$^a$  & 22 (19--25) & Translation repression, mRNA cleavage\\
+%Translation & mRNA cleavage & 21 & mRNA cleavage\\
+%Translation & mRNA  & 21--22 & mRNA cleavage\\
+%Translation & mRNA  & 24--26 & Histone and DNA Modification\\
+%\noalign{\smallskip}\hline\noalign{\smallskip}
+%\end{tabular}
+%Give details in a table foot note. $^a$ This is a comment to an entry in the table
+%\end{table}
+%
+
+
+\begin{acknowledgement}
+EA acknowledges support from NASA Grant ...  DCF acknowledges support from...
+\end{acknowledgement}
+
+%  IF you do NOT use bibtex, put comments before the following 2 lines
+\bibliographystyle{spbasicHBexo}  %for bibtex
+\bibliography{agol_fabrycky} %for bibtex-example
+
+\end{document}
