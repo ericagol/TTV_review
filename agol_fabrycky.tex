@@ -107,15 +107,15 @@
 
 \begin{document}
 
-\title*{Title: Transit Timing and Duration Variations for Discovery and Characterization of Exoplanets}
+\title*{Title: Transit Timing and Duration Variations for the Discovery and Characterization of Exoplanets}
 % Use \titlerunning{Short Title} for an abbreviated version of
 % your contribution title if the original one is too long
-\author{Eric Agol and Dan C.\ Fabrycky}
+\author{Eric Agol and Daniel C.\ Fabrycky}
 % Use 
 \authorrunning{Transit timing} % for an abbreviated version of
 % your contribution title if the original one is too long
 \institute{Eric Agol \at Department of Astronomy, Box 351580, University of Washington, Seattle, WA 98195-1580, USA \email{agol@uw.edu}
-\and Dan C.\ Fabrycky \at Dept.\ of Astronomy \& Astrophysics, University of Chicago, Chicago, IL 60637, USA \email{fabrycky@uchicago.edu}}
+\and Daniel C.\ Fabrycky \at Dept.\ of Astronomy \& Astrophysics, University of Chicago, Chicago, IL 60637, USA \email{fabrycky@uchicago.edu}}
 %
 % Use the package "url.sty" to avoid
 % problems with special characters
@@ -128,9 +128,26 @@
 
 \section{Introduction}
 
-  - Non-Keplerian perturbations [DF]
-  - Uranus/Neptune (Leverrier/Adams) [DF]
-  - Discovery of transits - refer to other chapters [DF]
+Here we discuss some aspects of planetary orbital physics, to set the stage for TTV and TDV.  Consider the vector stretching from the star of mass $M_\star$ to the planet of mass $M_p$ to be $\mathbf{r}=(x,y,z)$, with a distance $r$ and direction $\mathbf{\hat r}$.  The Keplerian potential, $\phi=-GM/r$ (where $M \equiv M_\star M_p / (M_\star+M_p)$ is called the reduced mass), is one of only two radial, power-law potentials that gives rise to closed orbits \footnote{the other one, the harmonic potential $-kr$ would only have relevance for collisionless orbits within a homogeneous massive body}.  This means that, in the absense of perturbtations, there is a strict periodicity $\mathbf{r}(t+P) = \mathbf{r}(t)$.  Moreover, Kepler showed that Tycho Brahe's excellent data for planetary positions were consistent with Copernicus' idea of a heliocentric system only if the planets (including the Earth) followed elliptical paths of semi-major axis $a$, and one focus on the Sun. Newton was successful at finding the principle underlying such orbits, a force law $F=-G M r^{-2} \mathbf{\hat r}$, which results in a period $P = 2 \pi a^{3/2} G^{-1/2} (M_\star + M_p)^{-1/2}$ (i.e. with the $a$-scaling Kepler found the planets actually obeyed).
+
+This research program was thrown into some doubt by the ``Great Inequality,'' the fact that the orbits of Jupiter and Saturn did not fit the fixed Keplerian ellipse model.  This was overcome by the perturbation theory of Lagrange, which resulted in the first characterization of the masses of those planets (check).  We can recreate the main effect of this insight by writing an additional force to that of gravity of the sun: 
+
+\begin{equation}
+F_{1} = -G M r_{1}^{-2} \mathbf{\hat r_{1}} - F_{21} 
+\end{equation}
+
+where we now specify forces and distances explicitly to planet 1, and add a force of planet 2 on planet 1.  This consists of two terms: 
+
+\begin{equation}
+F_{21} = -G M (r_{1}-r_{2})^{-3} (\mathbf{r_{2}} - \mathbf{r_{1}}) + G M_2 r_{2}^{-2} \mathbf{\hat r_{2}} 
+\end{equation}
+
+The first term on the right-hand-side is the direct gravitatational acceleration of planet 1 due to planet 2.  The second is a frame-acceleration effect, due to the acceleration the Sun feels due to the second planet.  Since the Sun is fixed at the zero of the frame, this acceleration is manifested by acceleration in the opposite direction of planet 1.  Can we average the force over the 5:2 resonant conjunction timescale, and see what it amounts to for each of the orbital elements? 
+
+Likewise, Leverrier and Adams used the same technique, dynamical perturbations, to discover the first planet by gravitational means. In this case, they did not know the zeroth order solution (i.e. the Keplerian ellipse) for the yet-to-be-discovered Neptune.  In its place, they assumed the Titius-Bode rule held, and sought only the phase of the orbit.  This worked because they only wanted to see how the acceleration, then deceleration, as Uranus passed Neptune, would betray its position on the sky to optical observers.  [Say later: the task that researchers set for themselves to discover planets by TTV is a bit more demanding.  We do not have any hints as to what the planet's orbit might be (neither circular nor roughly obeying some spacing law).  Additionally, the data per orbit is considerably noisy; in only a few cases are the orbit-by-orbit ``chopping'' signal statistically significant after just three transits. Finally, the orbit is only sampled at the transit phase, so opportunities for aliasing of the signal are abundant.]
+
+The discovery of transits marks the first time that data on exoplanets could be precise enough to notice gravitational interactions.  \footnote{Only around the same time (2000) were perturbations noticed in the resonant interaction of the planets of GJ 876.} 
+
   - Definition of TTVs/TDVs [DF] (Figure? O-C method)
      \citep{2005Sci...307.1288H,2010Sci...330...51H}
   - History: theory, observation  (Schneider TTV, Miralda-Escude' TTV) [EA]
