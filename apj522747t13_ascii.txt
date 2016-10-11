@@ -1,0 +1,204 @@
+Table 13
+Mass-Radius Data for Planets Less than 25 M_oplus (Part 2 of 2)
+
+Name	Mass (M_oplus)	Radius (R_oplus)	References	
+Kepler-51 b	
+
+
+
+
+
+
+
+	7.1 +or- 0.3	Masuda (2014)	
+Kepler-51 c	4.0 +or- 0.4	
+
+
+
+
+
+
+
+	Masuda (2014)	
+Kepler-51 d	7.6 +or- 1.1	9.7 +or- 0.5	Masuda (2014)	
+Kepler-60 b	4.2 +or- 0.6	1.71 +or- 0.13	This work	
+Kepler-60 c	3.9 +or- 0.8	1.90 +or- 0.15	This work	
+Kepler-60 d	4.2 +or- 0.8	1.99 +or- 0.16	This work	
+Kepler-68 b	5.97 +or- 1.70	2.33 +or- 0.02	Marcy et al. (2014)	
+Kepler-78 b	1.69 +or- 0.41	1.20 +or- 0.09	Pepe et al. (2013); Howard et al. (2013)	
+Kepler-79 b	
+
+
+
+
+
+
+
+	3.47 +or- 0.07	Jontof-Hutter et al. (2014)	
+Kepler-79 c	
+
+
+
+
+
+
+
+	3.72 +or- 0.08	Jontof-Hutter et al. (2014)	
+Kepler-79 d	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	Jontof-Hutter et al. (2014)	
+Kepler-79 e	
+
+
+
+
+
+
+
+	3.49 +or- 0.14	Jontof-Hutter et al. (2014)	
+Kepler-87 c	6.4 +or- 0.8	6.14 +or- 0.29	Ofir et al. (2014)	
+Kepler-89 b	10.5 +or- 4.6	1.71 +or- 0.16	Weiss et al. (2013)	
+Kepler-89 c	
+
+
+
+
+
+
+
+	4.32 +or- 0.41	Weiss et al. (2013); Masuda et al. (2013)	
+Kepler-89 e	
+
+
+
+
+
+
+
+	6.56 +or- 0.62	Weiss et al. (2013); Masuda et al. (2013)	
+Kepler-93 b	
+
+
+
+
+
+
+
+	1.48 +or- 0.02	Dressing et al. (2015)	
+Kepler-94 b	10.84 +or- 1.40	3.51 +or- 0.15	Marcy et al. (2014)	
+Kepler-95 b	13.0 +or- 2.9	3.42 +or- 0.09	Marcy et al. (2014)	
+Kepler-98 b	3.55 +or- 1.60	1.99 +or- 0.22	Marcy et al. (2014)	
+Kepler-99 b	6.15 +or- 1.30	1.48 +or- 0.08	Marcy et al. (2014)	
+Kepler-102 e	8.93 +or- 2.00	2.22 +or- 0.07	Marcy et al. (2014)	
+Kepler-105 c	4.60 +or- 0.9	1.31 +or- 0.07	This work	
+Kepler-106 c	10.44 +or- 3.20	2.50 +or- 0.32	Marcy et al. (2014)	
+Kepler-131 b	16.13 +or- 3.50	2.41 +or- 0.20	Marcy et al. (2014)	
+Kepler-138 b	
+
+
+
+
+
+
+
+	0.52 +or- 0.03	Jontof-Hutter et al. (2015)	
+Kepler-138 c	
+
+
+
+
+
+
+
+	1.20 +or- 0.07	Jontof-Hutter et al. (2015)	
+Kepler-138 d	
+
+
+
+
+
+
+
+	1.21 +or- 0.07	Jontof-Hutter et al. (2015)	
+Kepler-231 b	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	Kipping et al. (2014)	
+Kepler-231 c	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	Kipping et al. (2014)	
+Kepler-289 b	7.3 +or- 6.8	2.15 +or- 0.10	Schmitt et al. (2014)	
+Kepler-289 c	4.0 +or- 0.9	2.68 +or- 0.17	Schmitt et al. (2014)	
+Kepler-307 b	7.4 +or- 0.9	2.43 +or- 0.09	This work	
+Kepler-307 c	3.6 +or- 0.7	2.20 +or- 0.07	This work	
+Kepler-406 b	6.35 +or- 1.40	1.43 +or- 0.03	Marcy et al. (2014)	
+K2-3 b	8.4 +or- 2.1	
+
+
+
+
+
+
+
+	Almenara et al. (2015)	
+K2-19 c	
+
+
+
+
+
+
+
+	4.51 +or- 0.47	Barros et al. (2015)	
+WASP-47 d	
+
+
+
+
+
+
+
+	3.6 +or- 0.13	Becker et al. (2015)	
+
+Note. The last column lists references for both planetary and stellar parameters used in Figure 25.
