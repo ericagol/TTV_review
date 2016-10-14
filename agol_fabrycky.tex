@@ -128,29 +128,44 @@
 
 \section{Introduction}
 
-Here we discuss some aspects of planetary orbital physics, to set the stage for TTV and TDV.  Consider the vector stretching from the star of mass $M_\star$ to the planet of mass $M_p$ to be $\mathbf{r}=(x,y,z)$, with a distance $r$ and direction $\mathbf{\hat r}$.  The Keplerian potential, $\phi=-GM/r$ (where $M \equiv M_\star M_p / (M_\star+M_p)$ is called the reduced mass), is one of only two radial, power-law potentials that gives rise to closed orbits \footnote{the other one, the harmonic potential $-kr$ would only have relevance for collisionless orbits within a homogeneous massive body}.  This means that, in the absense of perturbations, there is a strict periodicity $\mathbf{r}(t+P) = \mathbf{r}(t)$.  Moreover, Kepler showed that Tycho Brahe's excellent data for planetary positions were consistent with Copernicus' idea of a heliocentric system only if the planets (including the Earth) followed elliptical paths of semi-major axis $a$, and one focus on the Sun. Newton was successful at finding the principle underlying such orbits, a force law $\mathbf{\ddot{r}}=-G M r^{-2} \mathbf{\hat r}$, which results in a period $P = 2 \pi a^{3/2} G^{-1/2} (M_\star + M_p)^{-1/2}$ (i.e. with the $a$-scaling Kepler found the planets actually obeyed).
+Here we discuss some aspects of planetary orbital physics, to set the stage for TTV and TDV.  Consider the vector stretching from the star of mass $M_\star$ to the planet of mass $M_p$ to be $\mathbf{r}=(x,y,z)$, with a distance $r$ and direction $\mathbf{\hat r}$.  The Keplerian potential, $\phi=-GM/r$ (where $M \equiv M_\star + M_p$ and the planet is replaced with a body of reduced mass $\mu \equiv M_\star M_p / (M_\star+M_p)$), is one of only two radial, power-law potentials that gives rise to closed orbits \footnote{the other one, the harmonic potential $-kr$ would only have relevance for collisionless orbits within a homogeneous massive body}.  This means that, in the absense of perturbations, there is a strict periodicity $\mathbf{r}(t+P) = \mathbf{r}(t)$.  Moreover, Kepler showed that Tycho Brahe's excellent data for planetary positions were consistent with Copernicus' idea of a heliocentric system only if the planets (including the Earth) followed elliptical paths of semi-major axis $a$, and one focus on the Sun. Newton was successful at finding the principle underlying such orbits, a force law $\mathbf{F} = \mu \mathbf{\ddot r} =-G \mu M r^{-2} \mathbf{\hat r}$, which results in a period $P = 2 \pi a^{3/2} G^{-1/2} (M_\star + M_p)^{-1/2}$ (i.e. with the $a$-scaling Kepler found the planets actually obeyed).
 
 This research program was thrown into some doubt by the ``Great Inequality,'' the fact that the orbits of Jupiter and Saturn did not fit the fixed Keplerian ellipse model.  This was overcome by the perturbation theory of Lagrange, which resulted in the first characterization of the masses of those planets (check).  We can recreate the main effect of this insight by writing an additional force to that of gravity of the Sun: 
-
 \begin{equation}
-\mathbf{F_{1}} = -G M r_{1}^{-2} \mathbf{\hat r_{1}} - \mathbf{F_{21}},
+\mathbf{F_{1}} = -G \mu_1 M r_{1}^{-2} \mathbf{\hat r_{1}} + \mathbf{F_{21}},
 \end{equation}
 where we now specify forces and distances explicitly to planet 1, and add a force of planet 2 on planet 1.  This latter force consists of two terms: 
-{\bf I'm not sure the following equation is correct as stands - if $r_1 < r_2$, then first term would be positive}
 \begin{equation}
-\mathbf{F_{21}} = -G M (r_{1}-r_{2})^{-3} (\mathbf{r_{2}} - \mathbf{r_{1}}) + G M_2 r_{2}^{-2} \mathbf{\hat r_{2}}.
+\mathbf{F_{21}} = \mu_1 \mathbf{\ddot r_1} = -G \mu_1 M_2 \vert r_{1}-r_{2}\vert^{-3} (\mathbf{r_{2}} - \mathbf{r_{1}}) + G \mu_1 M_2 r_{2}^{-2} \mathbf{\hat r_{2}}.
 \end{equation}
 The first term on the right-hand-side is the direct gravitational acceleration of planet 1 due to planet 2.  The second is a frame-acceleration effect, due to the acceleration the Sun feels due to the second planet.  Since the Sun is fixed at the zero of the frame, this acceleration is manifested by acceleration in the opposite direction of planet 1.  Can we average the force over the 5:2 resonant conjunction timescale, and see what it amounts to for each of the orbital elements? 
 
-Likewise, Leverrier and Adams used the same technique, dynamical perturbations, to discover the first planet by gravitational means. In this case, they did not know the zeroth order solution (i.e. the Keplerian ellipse) for the yet-to-be-discovered Neptune.  In its place, they assumed the Titius-Bode rule held, and sought only the phase of the orbit.  This worked because they only wanted to see how the acceleration, then deceleration, as Uranus passed Neptune, would betray its position on the sky to optical observers.  [Say later: the task that researchers set for themselves to discover planets by TTV is a bit more demanding.  We do not have any hints as to what the planet's orbit might be (neither circular nor roughly obeying some spacing law).  Additionally, the data per orbit is considerably noisy; in only a few cases are the orbit-by-orbit ``chopping'' signal statistically significant after just three transits. Finally, the orbit is only sampled at the transit phase, so opportunities for aliasing of the signal are abundant.]
+Likewise, Leverrier and Adams used the same technique, dynamical perturbations, to discover the first planet by gravitational means \citep{Adams1847,LeVerrier1877}. In this case, they did not know the zeroth order solution (i.e. the Keplerian ellipse) for the yet-to-be-discovered Neptune.  In its place, they assumed the Titius-Bode rule held, and sought only the phase of the orbit.  This worked because they only wanted to see how the acceleration, then deceleration, as Uranus passed Neptune, would betray its position on the sky to optical observers.  [Say later: the task that researchers set for themselves to discover planets by TTV is a bit more demanding.  We do not have any hints as to what the planet's orbit might be (neither circular nor roughly obeying some spacing law).  Additionally, the data per orbit is considerably noisy; in only a few cases are the orbit-by-orbit ``chopping'' signal statistically significant after just three transits. Finally, the orbit is only sampled at the transit phase, so opportunities for aliasing of the signal are abundant.]
 
-The discovery of transits marks the first time that data on exoplanets could be precise enough to notice gravitational interactions.  \footnote{Only around the same time (2000) were perturbations noticed in the resonant interaction of the planets of GJ 876.} 
+The discovery of transits marks the first time that data on exoplanets could be precise enough to notice gravitational interactions.\footnote{Only around the same time (2000) were perturbations noticed in the resonant interaction of the planets of GJ 876.}  The times of transit are primarily constrained by the decline of stellar flux during transit ingress, and the rise over egress, which occur on a timescale 
+\begin{equation}
+\tau \approx \pi^{-1} P(R_p/a) \approx 10^{-4}P \left(\frac{3 R_p}{R_\oplus}\right) \left(\frac{a}{0.3 \rm{AU}}\right)^{-1}.
+\end{equation}  
+This allows the transit times to be measured precisely relative to the orbital period, giving a sensitive measure of the variation of the angular position of a planet relative to a Keplerian orbit.  In contrast, the stellar radial velocity varies on the orbital timescale, and thus the precision of the orbital phase is poorly constrained in the absence of high precision or long duration (which allows deviations to grow with time).
 
-  - Definition of TTVs/TDVs [DF] (Figure? O-C method)
+\begin{itemize}
+\item Definition of TTVs/TDVs [DF] (Figure? O-C method)
      \citep{2005Sci...307.1288H,2010Sci...330...51H}
-  - History: theory, observation  (Schneider TTV, Miralda-Escude' TTV) [EA]
-     \citep{2002ApJ...564.1019M,2010Sci...330...51H}
+%\item History: theory, observation  (Schneider TTV, Miralda-Escude' TTV) [EA] \citep{2002ApJ...564.1019M,2010Sci...330...51H}
+\end{itemize}
 
+The literature on exoplanets has a history of rediscovering effects that had been well studied in the field of binary stars.  Radial velocity, transits/eclipses, the Rossiter-McLaughlin effect, astrometry, and high-contrast imaging have all been used in the study of multi-star sytems.  Stars, however, are only stable in a hierarchical configuration so that only secular or tidal dynamics can play a role in triple star systems \citep{2003A&A...398.1091B}.  Planetary systems can be much more compact due to the dominant mass of the central star, and so mean-motion resonances can dominate the dynamics of multi-planet systems.  Transit-timing variations due to mean-motion resonances is a novel aspect of exoplanet systems that did not play a role in the study of multi-star systems.  
+
+The first recognition of the importance of transit timing and duration variations was at the DPS and AAS meetings two decades ago by \citet{1996DPS....28.1208D,1996BAAS...28.1112D}, followed a few years later by \citet{2002ApJ...564.1019M} and \citet{Schneider2003,Schneider2004}.  More detailed studies which included the important effect of mean-motion resonance were submitted simultaneously by \citet{2005Sci...307.1288H} and \citet{2005MNRAS.359..567A}.  The former paper showed that Solar-system like perturbations might be used to find Earth-like planets, should transit times be measured with sufficient accuracy.  The latter paper coined the term `transit-timing variations,' with acronym TTVs, and defined TTVs as being the residuals of a linear fit to the times of a transiting planet.
+
+Initial studies of TTVs of hot Jupiters were able to place limits on the presence of Earth-mass planets near mean-motion resonance.  Some further studies claimed detection of perturbing planets causing TTVs or TDVs, but each of these were quickly disputed or refuted by additional measurements.  The first convincing detection awaited the launch of the Kepler spacecraft, and the detection of Kepler-9 which showed large-amplitude TTVs of two Saturn-sized planets with strong significance \citep{2010Sci...330...51H}; this discovery was remarkably similar to predictions that had been made based upon the GJ 876 system \citep{2005MNRAS.359..567A}.  This paper kicked off a series of discoveries of TTVs with the Kepler spacecraft, with now more than 100 systems displaying TTVs, and a handful showing TDVs.
+
+% Ribas (2008) 2008ApJ...677L..59R claimed a detection from TDV, but ruled out by Alonso et al. (2008) 2008A&A...487L...5A
+% Ribas (2009) defended his case 2009IAUS..253..149R
+% Diaz claimed TTVs of OGLE-TR-111b 2008ApJ...682L..49D; Adams et al. (2010) ruled it out 2010ApJ...714...13A
+% Maciejewski et al. (2010) claimed TTV of WASP-3b, which was refuted by Montalto (2012) 2012MNRAS.427.2757M, 
+%  Nascimbeni (2013) 2013A&A...549A..30N & Maciejewski (2013) 2013AJ....146..147M.  
+% WASP-3b TDV claim was made by Eibe et al. (2012) 2012MNRAS.423.1381E
 
 \section{Preliminaries}
 
@@ -162,23 +177,102 @@ Thus, the transit timing variations of each planet scale with the masses of the 
 in the system.
 In a two-planet system, then, to lowest order in mass ratio,
 \begin{eqnarray}
-\delta t_1 &\propto& P_1 \frac{m_2}{m_0} f_1(),\cr
-\delta t_2 &\propto& P_2 \frac{m_1}{m_0} f_2(),
+\vert \delta t_1\vert &=& \frac{P_1}{2\pi} \frac{m_2}{m_0} f_{12}(\alpha_{12},\mathbf{x}_{12}),\cr
+\vert \delta t_2\vert &=& \frac{P_2}{2\pi} \frac{m_1}{m_0} f_{21}(\alpha_{12},\mathbf{x}_{21}),
 \end{eqnarray}
-where the masses of the star and planets are $m_0, m_1,$ and $m_2$, and $f_1$ and $f_2$
-are a function of the period ratio and the angular orbital elements of the planets.
-
+where the masses of the star and planets are $m_0, m_1,$ and $m_2$, and $f_{ij}$ governs
+the timing variations of planet $j$ on planet $i$,
+which is a function of the semi-major axis ratio, $\alpha_{12}= a_1/a_2 < 1$, and the angular orbital 
+elements of the planets, $\mathbf{x}_{ij} = (\lambda_i,\omega_i,I_i,\Omega_i,\lambda_j,\omega_j,I_j,\Omega_j)$.
 
 %  - Basic scalings: $\propto$P, $\propto m/M_{star}$ for the perturber, stronger near resonance [EA]
-  - Energy/angular momentum conservation [DF]
+\begin{itemize}
+\item Energy/angular momentum conservation [DF]
+\end{itemize}
 
-  - Linear TTV (independently adds from different planets, off resonance)  - 
-  - Applications: [EA]
-    - Detection
-    - Confirmation
-    - Characterization
-      - Sensitive to density since time-dependent: transits are sensitive to density of star; TTV are sensitive to mass ratio; transit depth radius ratio - so we get density of planet from transits + TTV.   Dimensions of G are density and time.
-      - TTV + RV gives Mass + radius ;   CBPs as example  
+%  - Linear TTV (independently adds from different planets, off resonance)  - 
+With the addition of multiple perturbing planets, if the mass-ratio of the planets to the star is
+sufficiently small and if none of the planets exist in a resonant configuration, then the transiting timing 
+variations may be approximately expressed as linear combinations of the perturbations due to each companion.
+For $N$ planets, the TTVs become
+\begin{equation}
+\delta t_j = P_j \sum_{i \ne j}  \frac{m_i}{m_0} f_{ij}(\alpha_{ij},\mathbf{x}_{ij}).
+\end{equation}
+Note that $\alpha_{ij} = {\rm min}(a_i/a_j,a_j/a_i)$.
+
+The measurement of TTVs and TDVs has been used for confirmation, detection, and characterization of
+transiting exoplanets and their companions.  The Kepler spacecraft discovered thousands of transiting
+exoplanet candidates;  the classification as `candidate' was cautiously used to allow for other
+possible explanations, such as a blend of a foreground star and a background eclipsing binary causing
+an apparent transit-like signal.  The presence of multiple transiting planets around the same star
+gave a means of confirming two planets that display {\em anti-correlated} TTVs: due to energy and
+angular momentum conservation, the anti-correlation indicates dynamical interactions between the
+two planets, while such a configuration would not be stable for a triple star system.  A series of papers 
+used this technique to confirm that Kepler planet candidates were bonafide exoplanets:
+\citet{2011ApJS..197....2F, 2012ApJ...750..113F, 2012ApJ...750..114F, 2012ApJ...756..185F, 
+2012MNRAS.421.2342S, 2013MNRAS.428.1077S, 2013ApJS..208...22X, 2014ApJS..210...25X}.
+
+The confident detection of perturbing exoplanets with TTVs awaited the Kepler spacecraft as
+well.  The Kepler-19b planet showed sinusoidal TTVs that was used to identify a handful
+of possible period and mass that might be responsible for the perturbations \citep{2011ApJ...743..200B}.
+The unique identification of a perturbing planet was accomplished with Kepler-46 (aka KOI-872)
+which displayed very high signal-to-noise TTVs which allowed the period and mass of the
+perturber to be measured with some precision \citep{2012Sci...336.1133N}.
+
+The characterization of exoplanets with TTVs also began in earnest with the Kepler spacecraft.
+In addition to Kepler-9, the Kepler-18 system was characterized by a combination of TTVs and
+RVs, giving density estimates for the three transiting planets \citep{2011ApJS..197....7C}.
+
+The characterization of exoplanets is complicated by degeneracy between mass and eccentricity
+caused by aliasing at the frequency of the transiting planet (discussed below).  However,
+in general transit timing variations gives a means of measuring the density of exoplanets.
+The two observables associated with a light curve are the time stamp of each photometric
+measurement and the number of photons measured.  The number of photons is a dimensionless
+number, and thus may only constrain dimensionless quantities, such as radius ratio, impact 
+parameter, or the ratio of the stellar size to the semi-major axis.  The quantities that 
+have units of time --- the period, transit duration, ingress duration ---  can further
+constrain the density of the system since the dynamical time $t_{dyn} \approx
+(G\rho)^{-1/2}$.  \citet{2003ApJ...585.1038S} showed that a single transiting planet
+on a well-measured circular orbit may be used to measure the density of the star;
+in the case of multiple transiting planets, the circular assumption may be relaxed
+\citep{2014MNRAS.440.2164K}.
+The transit depth, then, gives the radius-ratio of the planet to the star, while if two
+transit and show TTVS, their TTVs give an estimate of the mass ratio of their perturber
+to the star.  Thus, two transiting planets yield an estimate of the density ratio of
+the planets to the star, and consequently we can obtain the density of the planets.
+Note that this is true even if the absolute mass and radius of the star are poorly
+constrained.  A caveat to this technique is that there is an eccentricity dependence that 
+is present in TTVs as well,
+but typically multi-transiting planet systems require low eccentricities to be stable,
+and in some cases the eccentricities can be constrained sufficiently from TTVs, from
+analyzing multiple planets \citep{2014MNRAS.440.2164K}, or
+statistically from an ensemble analysis \citep{2014ApJ...787...80H}, so this ends up not impacting the stellar density 
+estimate significantly, although it can impact the planet-star mass ratios, and
+hence inflate the planet density uncertainty.
+Another way to obtain an estimate of stellar density is from asteroseismology:
+in fact, the time dependence of asteroseismic measurements is what enables density
+to be constrained in this case as well \citep{1986ApJ...306L..37U}.
+
+If a pair of transiting exoplanets can be detected with {\it both} TTVs and RVs, then the
+absolute dimensions of the system can be obtained \citep{2005MNRAS.359..567A,
+2013ApJ...762..112M} as RVs have a dimensions of velocity, which 
+when combined with time measurements from TTVs gives dimensions of distance.
+In practice this technique has yet to yield useful constraints upon the properties
+of planetary systems \citep{2015MNRAS.453.2644A}, but it may prove as fruitful
+in the future much as double-lined spectroscopic binaries have used to measuring 
+the properties of binary stars.  Circumbinary planets are an extreme example
+of this technique: the timing offsets of the transits, combined with the eclipses
+and radial-velocity of the binary give very precise constraints on the parameters
+of the Kepler-16 system \citep{2011Sci...333.1602D}.
+
+%  - Applications: [EA]
+%    - Detection
+%    - Confirmation
+%    - Characterization
+%      - Sensitive to density since time-dependent: transits are sensitive to density of star; 
+%   TTV are sensitive to mass ratio; transit depth radius ratio - so we get density of 
+%   planet from transits + TTV.   Dimensions of G are density and time.
+%      - TTV + RV gives Mass + radius ;   CBPs as example  
 
 \section{Theory} % (applied to specific systems - show fits to actual data - either N-body or analytic)
   - TTVs:
@@ -227,9 +321,6 @@ References:
 
 Borucki \& Summers
 Struve
-Dobrovolskis \& Borucki (1996) - DPS, AAS
-Miralda-Escude
-Schneider
 Cabrera
 Charbonneau 2000
 
