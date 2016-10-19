@@ -279,8 +279,45 @@ of the Kepler-16 system \citep{2011Sci...333.1602D}.
     - Inner Keplerian variation;  CBPs as example (Kepler-16) [DF]
     - Near-resonant TTVs - Lithwick et al.  [DF] (Figure - mechanism + data)
        - Degeneracy - multiple resonances can give same solution (Kepler-19); Breaking degeneracy with TDV as well [DF]
-    - Chopping/other harmonics - KOI 1353 / KOI-872 [EA] (Figure)
+%    - Chopping/other harmonics - KOI 1353 / KOI-872 [EA] (Figure)
 \subsection{Chopping}
+
+When two planets are nearly resonant, the degeneracy between the mass ratios of the planets to the star
+and the eccentricity vector may be broken by examining additional non-resonant harmonics present in the data \citep{2015ApJ...802..116D}.
+These additional harmonics have a smaller amplitude due to the fact that they are not caused by resonant terms,
+and thus require higher signal-to-noise to break the degeneracy between the mass and eccentricity.
+Nevertheless, the chopping component can be detected in many cases, and leads to a unique measurement
+of the masses of the exoplanets \citep{2014ApJ...795..167S,2015ApJ...802..116D}.
+
+As an example, consider a pair of planets with period ratio of $P_2/P_1 = 1.52$.  This period ratio
+is close to 3:2, and thus is affected by this resonant term, giving a TTV period of $75 P_1$.
+Figure \ref{ttv_chopping} compares two planets with this period ratio with zero eccentricity
+and mass-ratios of $10^{-6}$ to a pair of planets with eccentricites of $e_1=e_2=0.04$
+and mass-ratios near $10^{-7}$.  Both pairs of planets give nearly identical amplitudes
+for the resonant term, while the larger mass ratio planets show a much stronger chopping
+variation.  In this case there is a clear difference between the TTVs of the two simulated
+systems:  the inner planet shows a drift over three orbital periods, and a sudden jump
+every third orbital period, while the outer one shows a similar pattern over two orbital
+periods.  These variations are due to perturbations at integer multiples of the synodic
+frequency, which has a period $P_{syn}^{-1} = 1/P_1-1/P_2$.  In this example we have
+set the phase of the orbital parameters to be such that the TTVs match;  change
+in the phase can also be indicative of a non-zero eccentricity contributing to the TTVs,
+and with an ensemble of planets which are believed to have a similar eccentricity
+distribution, the mass-eccentricity degeneracy may be broken statistically \citep{2012ApJ...761..122L,
+2014ApJ...787...80H}.
+
+% For figures use
+\begin{figure}
+\centerline{
+\includegraphics[width=0.9\textwidth]{ttv_chopping.png}}
+%
+\caption{Transit-timing variations of two low-eccentricity planets with larger
+mass ratios, $m_1 = m_2 = 10^{-6} m_*$ (green) compared with two higher eccentricity planets ($e_1=e_2=0.04$)
+with smaller mass ratios $m_1 = m_2 = 10^{-7} m_*$.  The zig-zag chopping component
+is apparent in the high-mass/low-eccentricity case, while less apparent in the low-mass/
+high-eccentricity case.}
+\label{ttv_chopping}       % Give a unique label
+\end{figure}
 
 
     - Resonance - Kepler-30?  Ne'svorny (1603.07306); Boue'+2012 - Kepler-223 (resonant chain - to fit data \& stability); room for more work on this.  [DF]
