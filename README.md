@@ -22,3 +22,61 @@ Both the HARPS & Keck teams clamin that K2-3d is affected by stellar variability
 abnormally high, so we'll eliminate this one.
 
 So, now I need to figure out how to make Dan's plot. [ ]
+
+10/18/2016
+To get the Julia call of TTVFast working (see https://github.com/kdeck/TTVFast/tree/master/jl_version), 
+I had to make sure the path  is added for the TTVFast.jl function, and I also had to 
+add an absolute path to the TTVFast.jl code since a relative path doesn't work when 
+one moves to a different directory.   There probably is a better way to code this up
+so that a path can be passed to the library in TTVFast.jl, but at the moment I'm not 
+sure how to do this.
+
+Okay, got the Julia version of TTVFast working, and managed to repeat runs with different
+parameters.  Unfortunately TTVFast seems to be missing transits on occasion...  not sure
+why. [ ]  I should probably write parameters to a file, call TTVFast directly, and see if the
+problem persists.
+
+10/19/2016
+
+Okay, I successfully made a chopping comparison plot with masses differing by a factor of ~10:
+
+Here are the zero-eccentricity & e_1=e_2 = 0.04 eccentricity parameters:
+julia> p0
+16-element Array{Float64,1}:
+   0.000295995
+   1.0        
+   1.0e-6     
+  10.0        
+   0.0        
+  90.0        
+   0.0        
+   0.0        
+ 293.193      
+   1.0e-6     
+  15.2        
+   0.0        
+  90.0        
+   0.0        
+   0.0        
+ 183.256      
+
+julia> p
+16-element Array{Float64,1}:
+   0.000295995
+   1.0        
+   1.09465e-7 
+  10.0        
+   0.04       
+  90.0        
+   0.0        
+  90.0        
+ 203.193      
+   9.03319e-8 
+  15.2        
+   0.04       
+  90.0        
+   0.0        
+ 270.0        
+ -86.7444     
+
+
