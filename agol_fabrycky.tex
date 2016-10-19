@@ -143,9 +143,10 @@ The first term on the right-hand-side is the direct gravitational acceleration o
 Likewise, Leverrier and Adams used the same technique, dynamical perturbations, to discover the first planet by gravitational means \citep{Adams1847,LeVerrier1877}. In this case, they did not know the zeroth order solution (i.e. the Keplerian ellipse) for the yet-to-be-discovered Neptune.  In its place, they assumed the Titius-Bode rule held, and sought only the phase of the orbit.  This worked because they only wanted to see how the acceleration, then deceleration, as Uranus passed Neptune, would betray its position on the sky to optical observers.  [Say later: the task that researchers set for themselves to discover planets by TTV is a bit more demanding.  We do not have any hints as to what the planet's orbit might be (neither circular nor roughly obeying some spacing law).  Additionally, the data per orbit is considerably noisy; in only a few cases are the orbit-by-orbit ``chopping'' signal statistically significant after just three transits. Finally, the orbit is only sampled at the transit phase, so opportunities for aliasing of the signal are abundant.]
 
 The discovery of transits marks the first time that data on exoplanets could be precise enough to notice gravitational interactions.\footnote{Only around the same time (2000) were perturbations noticed in the resonant interaction of the planets of GJ 876.}  The times of transit are primarily constrained by the decline of stellar flux during transit ingress, and the rise over egress, which occur on a timescale 
-\begin{equation}
-\tau \approx \pi^{-1} P(R_p/a) \approx 10^{-4}P \left(\frac{3 R_p}{R_\oplus}\right) \left(\frac{a}{0.3 \rm{AU}}\right)^{-1}.
+\begin{equation} \label{ingress}
+\tau \approx \pi^{-1} P(R_p/a) \approx 10^{-4}P \left(\frac{3 R_p}{R_\oplus}\right) \left(\frac{a}{0.3 \rm{AU}}\right)^{-1},
 \end{equation}  
+assuming an impact parameter of $b=0$.
 This allows the transit times to be measured precisely relative to the orbital period, giving a sensitive measure of the variation of the angular position of a planet relative to a Keplerian orbit.  In contrast, the stellar radial velocity varies on the orbital timescale, and thus the precision of the orbital phase is poorly constrained in the absence of high precision or long duration (which allows deviations to grow with time).
 
 \begin{itemize}
@@ -325,16 +326,64 @@ high-eccentricity case.}
     - Light time?  Borkovits deconvolution [DF]
     - Borkovits(?) - KOI 1474 {cleaner example?  Or leave out?  Future -- circumstellar planets in binaries; Schwartz et al. w/ Haghighipour.} [DF]     - TDVs
        - Precession - Kepler-108 {1606.04485} / KOI-142 {Nesvorny} / KOI-13 (Mazeh) - and CBPs turning on or off.  [DF]  Ragozzine/Wolf/Pal/Koscis/Jordan - GR precession - Heyl \& Gladman; J2  (Figure - CBP? - Kepler-47? Kostov? Kepler-35? Try them out.)
-    - Exomoons [EA]
 
 \section{Observations/Practical considerations} % [EA]
 Confirmation of multi-planet systems in Kepler anti-correlated sinusoids, Ford GPs [DF]
-  [ Some firsts to history section; some best-cases as examples in theory section ]
-  - Timing precision: [EA]
-     - Comes from steepest part of lightcurve ingress/egress
-     - Signal-to-noise of TTV/TDV measurements (Carter/Winn; Rogers/Page)
-     - Finite-exposure time effects
-     - Effects of stellar variability: flux variability, star spots.
+%  [ Some firsts to history section; some best-cases as examples in theory section ]
+%  - Timing precision: [EA]
+
+\subsection{Timing precision}
+
+The steepest portions of a transit are the ingress and egress when the planet crosses onto and
+off of the disk of the star, causing a dip of depth $\delta = (R_p/R_*)^2$ if we ignore limb-darkening.   
+Suppose for the moment that the only source of noise is Poisson noise due to the count rate of 
+the star, $\dot N$.  The photometric precision over the duration of ingress scales as
+$(\dot N \tau)^{1/2}$, where $\tau$ is the ingress duration (eqn.\ \ref{ingress}).  If the time of 
+ingress fit from a model is offset by $\sigma_g$, then the difference in counts observed
+versus the model is $\sigma_g \delta \dot N$ (the pink region in Fig.\ \ref{fig:ingress}).  Equating 
+this to photometric uncertainty gives $\sigma_g = \tau^{1/2} \dot N^{-1/2} \delta^{-1}$, which
+is the 68.3\% confidence timing precision assuming that the exposure time is much shorter than the
+ingress duration and that $\sigma_g \ll \tau$.  The same formula applies to egress. A longer transit 
+ingress duration leads to a shallower slope in ingress, which makes it more difficult to measure an 
+offset in time of the model.  Higher count rates and deeper transits improve the precision, as 
+expected.  Note that we've assumed that the duration of the transit is sufficiently long that the 
+error on $\delta$ is small.
+
+Suppose the transit duration is $T$.  Then, the uncertainty on the duration is given by
+the sum of the uncertainties on the ingress and egress, added in quadrature:
+$\sigma_T = \sqrt{2} \sigma_g$.  The timing precision, $\sigma_t$, is set by the mean of the ingress
+and egress, giving $\sigma_t = \frac{1}{\sqrt{2}} \sigma_g$.
+
+A more complete derivation of these expressions is given by \citet{2008ApJ...689..499C}, while an 
+expression which includes the effects of a finite integration time is given by \citet{2014ApJ...794...92P}.
+The assumptions of no limb-darkening and Poisson noise are generally broken by stars;  in addition,
+stellar variability contributes to timing uncertainty, for which there is yet to be a general
+expression.  These effects generally increase the uncertainty on the measurement of transit times
+and durations, and so the best practice would be to estimate the timing uncertainties from the
+data, accounting for effects of correlated stellar variability by including the full covariance
+matrix of the timing uncertainty \citep{2009ApJ...704...51C,2012MNRAS.419.2683G}.  Crossing of
+the path of the planet across star spots may also cause some uncertainty on the timing precision;
+this can be diagnosed by a larger scatter within transit than outside transit or other signs of
+significant stellar activity, and can be handled best by including the spots in the transit model 
+\cite{2016A&A...585A..72I}.
+
+% For figures use
+\begin{figure}
+% Use the relevant command for your figure-insertion program
+% to insert the figure file.
+% For example, with the graphicx style use
+\centerline{
+\includegraphics[width=0.5\textwidth]{ingress.pdf}}
+%
+\caption{Diagram of the transit ingress of a planet.  The precision of the timing of ingress, $\sigma_g$, is set by
+when the area of the ingress (pink) equals the timing precision over the duration of ingress.}
+\label{fig:ingress}       % Give a unique label
+\end{figure}
+
+%     - Comes from steepest part of lightcurve ingress/egress
+%     - Signal-to-noise of TTV/TDV measurements (Carter/Winn; Rogers/Page)
+%     - Finite-exposure time effects
+%     - Effects of stellar variability: flux variability, star spots.
 
 \section{Science Results}
     - Best characterization, specifically mass: Kepler-36 - conjunctions/impulse/Hill approximation (N-body) [EA]

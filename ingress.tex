@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+\draw[thick] (0,0) -- (1.6,0) -- (2.6,-2) -- (4.6,-2);
+\draw[fill=red,draw=black,opacity=0.2,thick,line join = round] (1.2,0) -- (2.2,-2) -- (2.6,-2) -- (1.6,0) -- (1.2,0) -- cycle;
+\draw[<->] (3,-2) -- (3,0) node[right, pos=0.5]{$\delta = (R_p/R_*)^2$};
+\draw[<->] (2.2,-2.2) -- (2.6,-2.2) node[below,pos=0.5]{$\sigma_g$};
+\end{tikzpicture}
+\end{document}
