@@ -79,4 +79,17 @@ julia> p
  270.0        
  -86.7444     
 
+Skewness?  Nesvorny - perturbing planet may have to be inclined - would give TDVs.
 
+There is a scatter in the densities of super-Earths.  5 M_earth bodies aren't necessarily
+rocky.
+
+Maybe cutoff at 15 M_earth.
+
+Add composition lines to mass-radius plot. [ ]  Puffy planets have low insolation.
+
+What is high-density massive planet? M ~ 15 M_earth; R < 2 R_earth.  Make sure there
+aren't outliers with poor data.  [ ]  Make error bars black. [ ]  Check on lowest mass
+planet - why are there two tickmarks at end of error bars? [ ]  Plot dots on top of
+error bars. [ ]  Don't need a title - describe in caption. [ ]  Add M_earth symbol. [ ]
+Add in more tickmarks. [ ]  Make axes & tickmarks heavier. [ ]
