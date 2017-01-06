@@ -242,18 +242,22 @@ ax=axes[1,1]
 tt10 =coeff1[1]+coeff1[2]*epoch1
 ttv1  = (tt1-tt10)*24.*60.
 ax[:plot](tt10_0,ttv1_0,"go")
+ax[:set_title](L"Planet 1, $P_1= 10$ days")
 ax[:plot](tt10,ttv1,"ro")
 ax[:plot](tt10_0,ttv1_0,"g-")
 ax[:plot](tt10,ttv1,"r-")
 ax[:axis]([0,1000,-0.5,0.5])
-ax[:set_ylabel]("TTV [min]")
+ax[:set_ylabel](L"O-C$_{TTV}$ [min]")
 ax=axes[2,1]
 tt20 = coeff2[1]+coeff2[2]*epoch2
 ttv2  = (tt2-tt20)*24.*60.
 ax[:plot](tt20_0,ttv2_0,"go")
+ax[:set_title](L"Planet 2, $P_2=15.2$ days")
 ax[:plot](tt20,ttv2,"ro")
 ax[:plot](tt20_0,ttv2_0,"g-")
 ax[:plot](tt20,ttv2,"r-")
 ax[:axis]([0,1000,-0.5,0.5])
 ax[:set_xlabel]("Time [day]")
-ax[:set_ylabel]("TTV [min]")
+ax[:set_ylabel](L"O-C$_{TTV}$[min]")
+savefig("ttv_chopping.pdf", bbox_inches="tight")
+

@@ -31,7 +31,7 @@ i22 = round(Int64,floor((time[ntphot]-t0[2])/p[2]))
 n2 = round(Int64,i22-i12+1)
 println("Number of transits of outer planet: ",n2)
 
-scatter(time,fflat)
+#scatter(time,fflat)
 
 for i=i11:i21
 #  plot((t0[1]+p[1]*i)*[1,1],[0.9995,1.0001])
@@ -93,16 +93,44 @@ for i=i12:i22
 #  read(STDIN,Char)
 # Move on to the next transit
 end
-
+im1_big = zeros(n1*6,nwidth*7)
+im2_big = zeros(n2*7,nwidth*6)
+for i=1:n1
+  for j=1:nwidth
+     for k=1:6
+       for l=1:7
+         im1_big[(i-1)*6+k,(j-1)*7+l]=im1[i,j]
+       end
+     end
+  end
+end
+for i=1:n2
+  for j=1:nwidth
+     for k=1:7
+       for l=1:6
+         im2_big[(i-1)*7+k,(j-1)*6+l]=im2[i,j]
+       end
+     end
+  end
+end
 
 fig,axes = subplots(1,2)
+fig[:tight_layout]()
 
 ax = axes[1]
 
-ax[:imshow](im1,interpolation="nearest")
+ax[:imshow](im1,interpolation="nearest",extent=[-25,25,0,n1],aspect="auto")
+#ax[:imshow](im1_big,interpolation="nearest")
+ax[:set_xlabel]("Timing offet (hr)")
+ax[:set_ylabel]("Transit number")
 
 ax = axes[2]
 #fig,axes = subplots()
 
-ax[:imshow](im2,interpolation="nearest")
+ax[:imshow](im2,interpolation="nearest",extent=[-25,25,0,n2],aspect="auto")
+#ax[:imshow](im2_big,interpolation="nearest")
+ax[:set_xlabel]("Timing offet (hr)")
+ax[:set_ylabel]("Transit number")
 #axes[:imshow](im2,interpolation="nearest")
+savefig("kepler36.pdf", bbox_inches="tight")
+
