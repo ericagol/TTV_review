@@ -11,7 +11,7 @@ function regress(X,Y,sigY)
 nx = ndims(X)
 sx = size(X)
 sy = size(Y)
-if (nx == 2) & (sx[2] == sy[1]) then
+if (nx == 2) & (sx[2] == sy[1])
 # Set up array for computing coefficients:
   A = zeros(sx[1],sx[1])
   B = zeros(sx[1])

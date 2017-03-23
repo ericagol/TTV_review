@@ -1,7 +1,7 @@
 
-%% spbasicBHexo: manually modified by HD on 20Apr2016 from spbasic.bst 
-%% to cut author lists longer than 5 authors to 3 authors et al. 
-%% The only modified part is in FUNCTION {format.names} 
+%% spbasicBHexo: modified from spbasic.bst as follows:
+%% HD, 20Apr2016 Cut author lists longer than 5 authors to 3 authors et al. Only modified part is in FUNCTION {format.names} 
+%% HD 16Mar2017 Removed DOI entry for articles and eprint entry for all doc-types. Added point to 'et al.', in FUNCTION {bbl.etal}
 %%
 %% This is file `spbasic.bst',
 %% generated with the docstrip utility.
@@ -238,7 +238,8 @@ FUNCTION {bbl.and}
 { "and"}
 
 FUNCTION {bbl.etal}
-{ "et~al" }
+{ "et~al." }
+%HD 16mar2017: inserted point in line 
 
 FUNCTION {bbl.editors}
 { "eds" }
@@ -491,6 +492,7 @@ FUNCTION {format.names}
 %%              "," *
               t "others" =
                 {
+%                   " " * bbl.etal *     original version
                   " " * bbl.etal *
                 }
                 { " " * t * }
@@ -1089,10 +1091,10 @@ FUNCTION {article}
       format.pages output
     }
   if$
-  format.doi output
+%  format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 FUNCTION {book}
@@ -1127,7 +1129,7 @@ FUNCTION {book}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 FUNCTION {booklet}
@@ -1143,7 +1145,7 @@ FUNCTION {booklet}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 
@@ -1181,7 +1183,7 @@ FUNCTION {inbook}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 
@@ -1208,7 +1210,7 @@ FUNCTION {incollection}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 FUNCTION {inproceedings}
@@ -1238,7 +1240,7 @@ FUNCTION {inproceedings}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 FUNCTION {conference} { inproceedings }
@@ -1256,7 +1258,7 @@ FUNCTION {manual}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 
@@ -1275,7 +1277,7 @@ FUNCTION {mastersthesis}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+ % format.eprint output
   fin.entry
 }
 
@@ -1291,7 +1293,7 @@ FUNCTION {misc}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 FUNCTION {phdthesis}
@@ -1309,7 +1311,7 @@ FUNCTION {phdthesis}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 
@@ -1331,7 +1333,7 @@ FUNCTION {proceedings}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 
@@ -1350,7 +1352,7 @@ FUNCTION {techreport}
   format.doi output
   format.url output
   format.note output
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 
@@ -1364,7 +1366,7 @@ FUNCTION {unpublished}
   format.doi output
   format.url output
   format.note "note" output.check
-  format.eprint output
+%  format.eprint output
   fin.entry
 }
 
