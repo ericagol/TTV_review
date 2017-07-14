@@ -295,7 +295,7 @@ A final mechanism of dynamical TTV is relevant for the inner orbit when a massiv
 \subsection{Chopping}
 
 When two planets are nearly resonant, the degeneracy between the mass ratios of the planets to the star
-and the eccentricity vector may be broken by examining TTV components present in the data \citep{2015ApJ...802..116D}.
+and the eccentricity vector may be broken by examining additional TTV components present in the data \citep{2015ApJ...802..116D}.
 The components at the synodic frequency and its harmonics have smaller amplitude, due to 
 the fact that they do not add coherently, and thus require higher signal-to-noise to detect.
 These synodic variations are referred to as ``chopping" as they commonly
@@ -349,11 +349,11 @@ Just as in several known cases of stellar triples, the precession of CBPs has ca
 The steepest portions of a transit are the ingress and egress when the planet crosses onto and
 off of the disk of the star, causing a dip of depth $\delta = (R_p/R_*)^2$ if limb-darkening is ignored.   
 Suppose for the moment that the only source of noise is Poisson noise due to the count rate of 
-the star, $\dot N$.  The photometric precision over the duration of ingress scales as
-$(\dot N \tau)^{1/2}$, where $\tau$ is the ingress duration (eqn.\ \ref{ingress}).  If the time of 
+the star, $\dot N$.  The photometric uncertainty over the duration of ingress, $\tau$ (eqn.\ \ref{ingress}), 
+scales as $(\dot N \tau)^{1/2}$.  If the time of 
 ingress fit from a model is offset by $\sigma_\tau$, then the difference in counts observed
 versus the model is $\sigma_\tau \delta \dot N$ (the pink region in Fig.\ \ref{fig:ingress}).  Equating 
-this to photometric uncertainty gives $\sigma_\tau = \tau^{1/2} \dot N^{-1/2} \delta^{-1}$, which
+this count deficit to the photometric uncertainty gives $\sigma_\tau = \tau^{1/2} \dot N^{-1/2} \delta^{-1}$, which
 is the 68.3\% confidence timing precision assuming that the exposure time is much shorter than the
 ingress duration and that $\sigma_\tau \ll \tau$.  The same formula applies to egress. A longer transit 
 ingress duration leads to a shallower slope in ingress, which makes it more difficult to measure an 
@@ -373,8 +373,9 @@ stellar variability contributes to timing uncertainty, for which there is yet to
 expression.  These effects generally increase the uncertainty on the measurement of transit times
 and durations, and so the best practice would be to estimate the timing uncertainties from the
 data, accounting for effects of correlated stellar variability by including the full covariance
-matrix of the timing uncertainty \citep{2009ApJ...704...51C,2012MNRAS.419.2683G}.  Crossing of
-the path of the planet across star spots may also cause some uncertainty on the timing precision \citep{2013A&A...556A..19O,2013MNRAS.430.3032B};
+matrix of the timing uncertainty \citep{2009ApJ...704...51C,2012MNRAS.419.2683G,ForemanMackey2017}.  Crossing of
+the path of the planet across star spots may also cause some uncertainty on the timing precision 
+\citep{2013A&A...556A..19O,2013MNRAS.430.3032B};
 this can be diagnosed by a larger scatter within transit than outside transit or other signs of
 significant stellar activity, and can be handled best by including the spots in the transit model 
 \citep{2016A&A...585A..72I}.
