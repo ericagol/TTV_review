@@ -213,6 +213,8 @@ When considering the $O-C$ shapes that each planet makes over a fixed time inter
 \end{equation}
 This scaling agrees with analytic work performed in the resonant \citep{2016ApJ...823...72N} and near-resonant \citep{2012ApJ...761..122L,2016ApJ...828...44H} regimes. Hence the TTV curves of the two planets are anti-correlated, and in the case that the masses are equal, the amplitude of the outer planet's TTV is larger because its orbital size needs to change more for its Keplerian orbital energy to equal the change in the inner planet's Keplerian orbital energy. 
 
+
+In general transit timing variations affords a means of measuring the density of exoplanets.
 The two observables associated with a light curve are the time stamp of each photometric
 measurement and the number of photons measured.  The number of photons is a dimensionless
 number, and thus may only constrain dimensionless quantities, such as radius ratio, impact 
@@ -255,13 +257,14 @@ of the Kepler-16 system \citep{2011Sci...333.1602D}.
 
 Here we discuss the physical models for different types of TTV interactions, and point the reader to real systems that exhibit that kind of interaction. 
 
-Close to resonances, a combination of changes in semi-major axis and eccentricity lead to TTV cycles whose period depends on the separation from the resonance \citep{2012ApJ...761..122L}.  The main TTV variation comes from only one resonance, the one the system is closest to, which allows its critical angles to move slowly and thus its effect to build up.  If the period ratio $P_2/P_1$ is within a few percent of the ratio $j/k$, with $j$ and $k$ being integers, then the expected TTV period is 
+Close to resonances, a combination of changes in semi-major axis and eccentricity lead to TTV cycles whose period depends on the separation from the resonance \citep{Steffen2006,2012ApJ...761..122L}; the latter refer to this as the `super-period.'  The main TTV variation comes from only one resonance, the one the system is closest to, which allows its critical angles to move slowly and thus its effect to build up.  If the period ratio $P_2/P_1$ is within a few percent of the ratio $j/k$, with $j$ and $k$ being integers, then the expected TTV period is 
 \begin{equation}
 P_{\rm TTV} = 1/|j/P_2-k/P_1|. \label{eqn:pttv}
 \end{equation}
 The order of the resonance is $|j-k|$, and the strength of the resonance depends on the planetary eccentricities to a power of the order minus 1.  Therefore, first order resonances affect planets with no initial eccentricity, but higher order resonances have a large effect only in the presence of some eccentricity. 
 
 Seeing two planets transit the star helps immensely to characterize a near-resonant system, because then the relative transit phase of the two planets can be compared with the phase of the TTV signals \citep{2012ApJ...761..122L}.  If the eccentricities are maximally damped out, then the resonant terms of the interaction continue forcing a small eccentricity that quickly precesses, causing the TTV.  In that case, the phase of the signal is predictable, and the two planets' eccentricities are anti-aligned, so the TTV signals consist of anti-corrlated sinusoids.  Also useful in that case is that the amplitudes lead directly to the planetary masses.  If so-called ``free eccentricity'' remains, however, the phases would usually differ from that prediction, the TTV in the two planets may not be in perfect anti-phase, and only an approximate mass scale rather than a measurement is available, which is referred to as the mass-eccentricity degeneracy.  The first real system that showed this pattern convincingly was Kepler-18 \citep{2011ApJS..197....7C}. %[figure of that rather than the theory one given currently in figure 2?]. 
+The degeneracy between mass and eccentricity results from aliasing at the period of the transiting planet, which causes short period variations to be aliased with $P_{TTV}$ \citep{2012ApJ...761..122L,2015ApJ...802..116D}.  
 
 The measurement of TTVs and TDVs has been used for confirmation, detection, and characterization of
 transiting exoplanets and their companions.  The \emph{Kepler} spacecraft discovered thousands of transiting
@@ -269,8 +272,8 @@ exoplanet candidates;  the classification as `candidate' was cautiously used to 
 possible explanations, such as a blend of a foreground star and a background eclipsing binary causing
 an apparent transit-like signal.  The presence of multiple transiting planets around the same star
 gave a means of confirming two planets that display {\em anti-correlated} TTVs: due to energy conservation (equation~\ref{eqn:deltat}), the anti-correlation indicates dynamical interactions between the
-two planets, while such a configuration would not be stable for a triple star system.  Many papers 
-used this technique to confirm that \emph{Kepler} planet candidates were bonafide exoplanets, starting with a series of three using different techniques to identify the anticorrelation in data \citet{2011ApJS..197....2F, 2012ApJ...750..113F, 2012ApJ...750..114F}.
+two planets, while such a configuration would not be stable for a triple star system.  Many papers
+used this technique to confirm that \emph{Kepler} planet candidates were bonafide exoplanets using different techniques to identify the anticorrelation in data \citep{2012ApJ...750..113F,2012ApJ...756..185F,2012ApJ...750..114F,2012MNRAS.421.2342S,2013ApJS..208...22X}.
 
 The characterization of exoplanets with TTVs also began in earnest with the \emph{Kepler} spacecraft.
 In addition to Kepler-9, the Kepler-18 system was characterized by a combination of TTVs and
@@ -286,16 +289,19 @@ Several other TTV mechanisms have been detected which do not rely on resonances,
 
 If the outer planet transits, and the inner orbiting body is very massive, the dominant effect can be the shifting of the primary star with respect to the barycenter.   Then, as the outer planet orbits the barycenter, it arrives at the moving target either early or late.  This effect was numbered (i) by \cite{2005MNRAS.359..567A}, and it is seen clearly in circumbinary planet systems.  For instance, the secondary star of Kepler-16 \citep{2011Sci...333.1602D} moves the primary by many times its own radius, resulting in an $\sim 8$~day TTV on top of a 225 day orbit. 
 
-A final mechanism of dynamical TTV is relevant for the inner orbit when a massive body orbits at large distance.  The tide that body exerts on the inner orbit causes its orbital period to differ slightly from what it would be in the absence of that outer body.  If the outer body is in the plane of the inner orbit, its tide slows down the inner orbit, lengthening its period.  If the outer body is far out of the plane of the inner orbit, its tide speeds up the inner orbit, shortening its period.  The tide also depends on the third power of the distance to that external body.  Hence, when the external body moves on an eccentric and/or inclined orbit, it induces a period variation in the inner orbit, which has the period of the outer orbit.  Also imporant for the timing is how the outer perturber instantaneously torques the inner orbit's eccentricity.  These effects were put together and analyzed by \cite{2003A&A...398.1091B} in the context of triple star systems, and the in-plane physics was explained clearly as mechanism (ii) of \cite{2005MNRAS.359..567A}.  An example of these effects was provided by Kepler-419 \citep{2014ApJ...791...89D}, in which an eccentric massive planet accompanies an inner planet with a period ratio of 9.7.
+A final mechanism of dynamical TTV is relevant for the inner orbit when a massive body orbits at large distance.  The tide that body exerts on the inner orbit causes its orbital period to differ slightly from what it would be in the absence of that outer body.  If the outer body is in the plane of the inner orbit, its tide slows down the inner orbit, lengthening its period.  If the outer body is far out of the plane of the inner orbit, its tide speeds up the inner orbit, shortening its period.  The tide also depends on the third power of the distance to that external body.  Hence, when the external body moves on an eccentric and/or inclined orbit, it induces a period variation in the inner orbit, which has the period of the outer orbit.  Also imporant for the timing is how the outer perturber instantaneously torques the inner orbit's eccentricity.  These effects were put together and analyzed by \cite{2003A&A...398.1091B} in the context of triple star systems, and the in-plane physics was explained as mechanism (ii) of \cite{2005MNRAS.359..567A}.  An example of these effects was provided by Kepler-419 \citep{2014ApJ...791...89D}, in which an eccentric massive planet accompanies an inner planet with a period ratio of 9.7.
 
 \subsection{Chopping}
 
 When two planets are nearly resonant, the degeneracy between the mass ratios of the planets to the star
-and the eccentricity vector may be broken by examining additional harmonics present in the data \citep{2015ApJ...802..116D}.
-These additional harmonics have a smaller amplitude due to the fact that they are not close to resonance,
-and thus require higher signal-to-noise to break the degeneracy between the mass and eccentricity.
-Nevertheless, the chopping component can be detected in many cases, and it leads to a unique measurement
-of the masses of the exoplanets \citep{2014ApJ...790...58N,2014ApJ...795..167S,2015ApJ...802..116D}.
+and the eccentricity vector may be broken by examining additional TTV components present in the data \citep{2015ApJ...802..116D}.
+The components at the synodic frequency and its harmonics have smaller amplitude, due to 
+the fact that they do not add coherently, and thus require higher signal-to-noise to detect.
+These synodic variations are referred to as ``chopping" as they commonly
+show TTVs that alternate early and late, on top of the larger amplitude TTVs with period $P_{TTV}$.
+Despite the smaller amplitude, the chopping components can be detected in many cases, and can break
+the mass-eccentricity degeneracy, leading to a unique measurement of the masses of the exoplanets 
+\citep{2014ApJ...790...58N,2014ApJ...795..167S,2015ApJ...802..116D}.
 
 As an example, consider a pair of planets with period ratio of $P_2/P_1 = 1.52$.  This period ratio
 is close to 3:2, and thus is affected by this resonant term, giving a TTV period of $38 P_1$ by equation~\ref{eqn:pttv}.
@@ -331,9 +337,9 @@ high-eccentricity case.}
 
 \subsection{Transit Duration Variations}
 
-TDVs have given useful results for characterization of individual systems, though fewer in number than TTVs.
+TDVs have given useful results for characterization of individual systems, though fewer in number than TTVs.  Two mechanisms for TDV have been observed in planetary system orbiting a single primary star.  The first is torque due to the rotational oblateness of the star.  It is a convincing model for the duration changes in Kepler-13 b \citep[KOI 13.01][]{Szab2012} and a controversial explanation for transit shape anomalies in PTFO 8-8695 \citep{2013ApJ...774...53B}.  The second planetary cause of TDVs is dramatic eccentricity variations due to a resonant interaction.  The length of the chord across the star, as well as the speed at which the planet moves along that chord, are changed during the planetary interaction.  This effect has been observed in KOI-142 \citep{2013ApJ...777....3N}.  Finally, it has not been measured yet for planets orbiting single stars, but slow secular precession of the eccentricity is expected by general relativity \citep{2008MNRAS.389..191P}, by stellar oblateness \citep{2007MNRAS.377.1511H}, and by tidal distortion \citep{2009ApJ...698.1778R}.  It is likely that very long time-baseline measurements, or comparing the measurements of two time-separated space missions like Kepler and Plato, will be able to detect this effect.
 
-The most dramatic TDVs are due to the moving-target effect described for TTVs in the context of CBPs.  If the transit occurs while the star is moving in the same direction as the planet, the transit duration is longer, if in opposite directions, the transit duration is shorter.  Matching the prediction from the phase of the binary completely secures the interpretation of the signal that an object is in a circumbinary orbit, as discussed extensively by \cite{2013ApJ...770...52K} for the cases of Kepler-47 and Kepler-64 (a.k.a. PH-1, KIC 4862625b).
+More dramatic dramatic TDVs can occur in circumbinary planet systems due to the moving-target effect described above for TTVs.  If the transit occurs while the star is moving in the same direction as the planet, the transit duration is longer; if in opposite directions, the transit duration is shorter.  Matching the prediction from the phase of the binary completely secures the interpretation of the signal that an object is in a circumbinary orbit, as discussed extensively by \cite{2013ApJ...770...52K} for the cases of Kepler-47 and Kepler-64 (a.k.a. PH-1, KIC 4862625b).
 
 Just as in several known cases of stellar triples, the precession of CBPs has caused transits to turn on and off \citep{2017MNRAS.465.3235M}.  The first case of that phenomenon was Kepler-35 \citep{2012Natur.481..475W}, and the most spectacular so far observed was Kepler-413 \citep{2014ApJ...784...14K}, in which a $4^\circ$ mutual inclination caused transits to stop and then start again nearly half a precession cycle later.  Planetary torques also cause TDV, albeit on a longer timescale through changing the inclination.  This was observed in Kepler-117 \citep{2015MNRAS.453.2644A} as well as Kepler-108 \citep{1538-3881-153-1-45}, the latter indicating mutual inclination of $\sim 15^\circ$ in a rather hierarchical pair of planets. 
 
@@ -350,13 +356,13 @@ Finally, it has not been measured yet, but slow secular precession of the eccent
 The steepest portions of a transit are the ingress and egress when the planet crosses onto and
 off of the disk of the star, causing a dip of depth $\delta = (R_p/R_*)^2$ if limb-darkening is ignored.   
 Suppose for the moment that the only source of noise is Poisson noise due to the count rate of 
-the star, $\dot N$.  The photometric precision over the duration of ingress scales as
-$(\dot N \tau)^{1/2}$, where $\tau$ is the ingress duration (eqn.\ \ref{ingress}).  If the time of 
-ingress fit from a model is offset by $\sigma_g$, then the difference in counts observed
-versus the model is $\sigma_g \delta \dot N$ (the pink region in Fig.\ \ref{fig:ingress}).  Equating 
-this to photometric uncertainty gives $\sigma_g = \tau^{1/2} \dot N^{-1/2} \delta^{-1}$, which
+the star, $\dot N$.  The photometric uncertainty over the duration of ingress, $\tau$ (eqn.\ \ref{ingress}), 
+scales as $(\dot N \tau)^{1/2}$.  If the time of 
+ingress fit from a model is offset by $\sigma_\tau$, then the difference in counts observed
+versus the model is $\sigma_\tau \delta \dot N$ (the pink region in Fig.\ \ref{fig:ingress}).  Equating 
+this count deficit to the photometric uncertainty gives $\sigma_\tau = \tau^{1/2} \dot N^{-1/2} \delta^{-1}$, which
 is the 68.3\% confidence timing precision assuming that the exposure time is much shorter than the
-ingress duration and that $\sigma_g \ll \tau$.  The same formula applies to egress. A longer transit 
+ingress duration and that $\sigma_\tau \ll \tau$.  The same formula applies to egress. A longer transit 
 ingress duration leads to a shallower slope in ingress, which makes it more difficult to measure an 
 offset in time of the model.  Higher count rates and deeper transits improve the precision, as 
 expected.  Note that we've assumed that the duration of the transit is sufficiently long that the 
@@ -364,8 +370,8 @@ error on $\delta$ is small.
 
 Suppose the transit duration is $T$.  Then, the uncertainty on the duration is given by
 the sum of the uncertainties on the ingress and egress, added in quadrature:
-$\sigma_T = \sqrt{2} \sigma_g$.  The timing precision, $\sigma_t$, is set by the mean of the ingress
-and egress, giving $\sigma_t = \frac{1}{\sqrt{2}} \sigma_g$.
+$\sigma_T = \sqrt{2} \sigma_\tau$.  The timing precision, $\sigma_t$, is set by the mean of the ingress
+and egress, giving $\sigma_t = \frac{1}{\sqrt{2}} \sigma_\tau$.
 
 A more complete derivation of these expressions is given by \citet{2008ApJ...689..499C}, while an 
 expression which includes the effects of a finite integration time is given by \citet{2014ApJ...794...92P}.
@@ -374,8 +380,9 @@ stellar variability contributes to timing uncertainty, for which there is yet to
 expression.  These effects generally increase the uncertainty on the measurement of transit times
 and durations, and so the best practice would be to estimate the timing uncertainties from the
 data, accounting for effects of correlated stellar variability by including the full covariance
-matrix of the timing uncertainty \citep{2009ApJ...704...51C,2012MNRAS.419.2683G}.  Crossing of
-the path of the planet across star spots may also cause some uncertainty on the timing precision \citep{2013A&A...556A..19O,2013MNRAS.430.3032B};
+matrix of the timing uncertainty \citep{2009ApJ...704...51C,2012MNRAS.419.2683G,ForemanMackey2017}.  Crossing of
+the path of the planet across star spots may also cause some uncertainty on the timing precision 
+\citep{2013A&A...556A..19O,2013MNRAS.430.3032B};
 this can be diagnosed by a larger scatter within transit than outside transit or other signs of
 significant stellar activity, and can be handled best by including the spots in the transit model 
 \citep{2016A&A...585A..72I}.
@@ -391,7 +398,7 @@ TTV \citep{2010PASP..122..935E}.
 \centerline{
 \includegraphics[width=0.5\textwidth]{ingress.pdf}}
 %
-\caption{Diagram of the transit ingress of a planet, flux versus time.  The precision of the timing of ingress, $\sigma_g$, is set by
+\caption{Diagram of the transit ingress of a planet, flux versus time.  The precision of the timing of ingress, $\sigma_\tau$, is set by
 when the area of the ingress (pink) equals the timing precision over the duration of ingress. The same applies to egress, albeit
 with the time flipped in this plot.}
 \label{fig:ingress}       % Give a unique label
@@ -399,7 +406,7 @@ with the time flipped in this plot.}
 
 \section{Science Results}
 
-The best characterized pair of small planets to date using TTV reside in the Kepler-36 system \citep{2012Sci...337..556C}.  As this planet pair is in close proximity, the conjunctions cause a significant kick to each planet resulting a TTV amplitude that is $\approx 1$\% of the orbital periods of the planets.  Figure \ref{fig:kep36} shows a `river-plot' for all seventeen quarters of long-cadence \emph{Kepler} data for this pair of planets.  After each 7(6) orbits of the inner(outer) planet (or so), there is a conjunction which causes a change in the eccentricity vector and period of each planet.  The change in the eccentricity vector causes a sudden change in the subsequent transit time, while the change in period causes a change in slope;  these are apparent for Kepler-36c in Figure \ref{fig:kep36}.  The large TTVs enable a precise measurement of the planet-star mass ratios for both planets (using the TTVs of the companion planet), while the star shows asteroseismic variability which gives a precise estimate of the stellar mass.   The net result are masses with uncertainties of $<8$\%, which is the most precise to date for planets of approximately this mass or lower, $4.5$ and $8.0 M_\oplus$.  The inner planet shows a density which is consistent with scaling up in mass a planet of the composition of Earth, while the outer planet requires a significant H/He envelope to explain its size which is comparable to Neptune \citep{2012Sci...337..556C}.
+The best characterized pair of small planets to date using TTV reside in the Kepler-36 system \citep{2012Sci...337..556C}.  As this planet pair is in close proximity, the conjunctions cause a significant kick to each planet resulting a TTV amplitude that is $\approx 1$\% of the orbital periods of the planets.  Figure \ref{fig:kep36} shows a `river-plot' for all seventeen quarters of long-cadence \emph{Kepler} data for this pair of planets.  After each 7(6) orbits of the inner(outer) planet (or so), there is a conjunction which causes a change in the eccentricity vector and period of each planet.  The change in the eccentricity vector causes a sudden change in the subsequent transit time, while the change in period causes a change in slope;  these are apparent for Kepler-36c in Figure \ref{fig:kep36}.  The large TTVs enable a precise measurement of the planet-star mass ratios for both planets (using the TTVs of the companion planet), while the star shows asteroseismic variability which gives a precise estimate of the stellar mass.   The result are masses with uncertainties of $<8$\%, which is the most precise to date for planets of approximately this mass or lower, $4.5$ and $8.0 M_\oplus$.  The inner planet shows a density which is consistent with scaling up in mass a planet of the composition of Earth, while the outer planet requires a significant H/He envelope to explain its size which is comparable to Neptune \citep{2012Sci...337..556C}.
 
 \begin{figure}
 \centerline{
@@ -408,9 +415,7 @@ The best characterized pair of small planets to date using TTV reside in the Kep
 \label{fig:kep36}
 \end{figure}
 
-
 A wide-spread phenomenon was detected by TTV characterization of masses: the existence of puffy sub-Neptune planets.  In the first such case, Kepler-11 e \citep{2011Natur.470...53L}, a planet with a mass half of Neptune's has a size slightly bigger than Neptune.  Even more extreme cases of this class have been found, the most extreme which we consider secure is a $2.1^{+1.5}_{-0.8} M_\oplus$ planet with a radius of $7 R_\oplus$ in Kepler-51 \citep{2014ApJ...783...53M}.  These massive envelopes mean these low-mass planets formed while gas was still present in the protoplanetary disk, and that they were able to capture that gas, a surprising result \citep[e.g.][]{2016ApJ...817...90L,2016ApJ...825...29G}. 
- 
 
 Catalogs of transit times have been produced for the multi-planet \emph{Kepler} systems \citep{2013ApJS..208...16M,Rowe2015,2016ApJS..225....9H}. Several analyses of an ensemble of TTV pairs of planets have recently been carried out \citep{2014ApJ...787...80H,2013ApJS..208...22X,2014ApJS..210...25X,2016ApJ...820...39J}, with the largest by Hadden \& Lithwick (2016), yielding constraints on the RMS eccentricity of the population of planets.  A slightly smaller sample, selecting only planets with mass precisions of better than $3-\sigma$, yields Figure \ref{fig:density_period}.  There appears to be a trend of mean density decreasing with orbital period (one exception is K2-3d, although the authors warn its RV mass estimate may be affected by stellar variability).  At periods near $\approx 10$ days, the RV and TTV densities agree rather well.  At shorter period, most of the RV detections are single-planets, which in general appear to have lower density relative to their multi-planet counterparts \citep{Steffen2016}.  When radius is plotted versus mass, and color-coded as a function of flux, Fig.\ \ref{fig:density_period}, there is a general trend of radius increasing with mass, albeit with a large scatter in mass, while a handful of `puffy' planets (with masses measured with TTV) show shockingly large radii given their small masses.  These mass measurements are surprising, but difficult to dispute as larger masses would have led to a larger, and hence easier-to-measure, TTV signal.
 
@@ -439,7 +444,8 @@ systems with TTV (and TDVs) looks promising.
 
 \begin{acknowledgement}
 EA acknowledges support from NASA Grants NNX13AF20G, NNX13A124G, NNX13AF62G, from National Science Foundation (NSF) grant AST-1615315, and from NASA Astrobiology Institute's Virtual Planetary
-Laboratory, supported by NASA under cooperative agreement NNH05ZDA001C.  DCF acknowledges support from NASA under Grant No. NNX14AB87G issued through the \emph{Kepler} Participating Scientist Program and from the Alfred P. Sloan Foundation.  We thank Jason Steffen, Sam Hadden, Jack Lissauer, Kento Masuda, Mahmoudreza Oshagh, 
+
+Laboratory, supported by NASA under cooperative agreement NNH05ZDA001C.  DCF acknowledges support from NASA under Grant No. NNX14AB87G issued through the \emph{Kepler} Participating Scientist Program and from the Alfred P. Sloan Foundation.  We thank Sam Hadden, Jack Lissauer, Kento Masuda, Mahmoudreza Oshagh, and Jason Steffen for feedback.
 \end{acknowledgement}
 
 %  IF you do NOT use bibtex, put comments before the following 2 lines
