@@ -17,7 +17,7 @@ method = vec(data[:,11])
 mult = vec(data[:,21])
 
 nplanet = length(mass)
-#density = 3./4./pi*mass.*MSUN./(radius.*RSUN).^3
+#density = 3./4./pi*mass.*MEARTH./(radius.*REARTH).^3
 density = zeros(nplanet)
 sdensity = zeros(nplanet)
 # this should have mstar, not mass (of planet):
@@ -50,8 +50,8 @@ for i=1:nplanet
      rr[j]=radius[i]+sR2[i]*r2[j]
     end
   end
-  density[i] = mean(3./4./pi*mr.*MSUN./(rr.*RSUN).^3)
-  sdensity[i] = std(3./4./pi*mr.*MSUN./(rr.*RSUN).^3)
+  density[i] = mean(3./4./pi*mr.*MEARTH./(rr.*REARTH).^3)
+  sdensity[i] = std(3./4./pi*mr.*MEARTH./(rr.*REARTH).^3)
   if mult[i] > 1
     if method[i] == "RV"
       irv =[irv;i]
@@ -89,7 +89,7 @@ ax[:set_yscale]("log")
 #ax[:scatter](period[ittv],density[ittv],c="b",alpha=0.5,label="TTV",s=mult[ittv].*50.)
 ax[:errorbar](period[ittv],density[ittv],sdensity[ittv],c="b",alpha=0.75,label="TTV",fmt="o")
 #ax[:set_title]("Planet density versus period")
-ax[:axis]([1,2e2,5e-3,10])
+ax[:axis]([1,2e2,5e-3,50])
 #ax[:set_xlabel]("Flux/(Solar Constant)")
 ax[:set_xlabel]("Period [d]")
 ax[:set_ylabel]("Density [g/cc]")

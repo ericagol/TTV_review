@@ -17,7 +17,7 @@ Teff = convert(Vector{Float64},data[:,18])
 method = vec(data[:,11])
 mult = vec(data[:,21])
 
-density = 3./4./pi*mass.*MSUN./(radius.*RSUN).^3
+density = 3./4./pi*mass.*MEARTH./(radius.*REARTH).^3
 mstar = convert(Vector{Float64},data[:,12])
 flux = (Teff./5777.).^4./(period./365.25).^(4//3).*mstar.^(2//3)
 
