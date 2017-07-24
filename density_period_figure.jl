@@ -20,7 +20,9 @@ nplanet = length(mass)
 #density = 3./4./pi*mass.*MSUN./(radius.*RSUN).^3
 density = zeros(nplanet)
 sdensity = zeros(nplanet)
-flux = (Teff./5777.).^4./(period./365.25).^(4//3).*mass.^(2//3)
+# this should have mstar, not mass (of planet):
+mstar = convert(Vector{Float64},data[:,12])
+flux = (Teff./5777.).^4./(period./365.25).^(4//3).*mstar.^(2//3)
 
 irv =[]
 irv1 =[]

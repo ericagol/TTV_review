@@ -21,6 +21,10 @@ density = 3./4./pi*mass.*MSUN./(radius.*RSUN).^3
 mstar = convert(Vector{Float64},data[:,12])
 flux = (Teff./5777.).^4./(period./365.25).^(4//3).*mstar.^(2//3)
 
+semi = (.25*period^2.*GRAV.*mass.*MSUN/pi^2).^(1./3.) # semi-major axis in cm
+albedo = 0.0 
+tplanet = Teff.*(1.0-albedo)^.25.*sqrt(0.5*radius.*RSUN./semi)
+
 nplanet = length(mass)
 irv =[]
 irv1 =[]
