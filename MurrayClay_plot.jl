@@ -23,9 +23,16 @@ rstar = convert(Vector{Float64},data[:,15])
 mstar = convert(Vector{Float64},data[:,12])
 flux = (Teff./5777.).^4./(period./365.25).^(4//3).*mstar.^(2//3)
 
-semi = (.25*period^2.*GRAV.*mstar.*MSUN/pi^2).^(1./3.) # semi-major axis in cm
-albedo = 0.0 
+semi = (.25*(period*24.*3600.).^2.*GRAV.*mstar.*MSUN/pi^2).^(1./3.) # semi-major axis in cm
+albedo = 0.0   # set planet albedo
+# compute the "equilibrium" temperature of planet (assuming perfect recirculation):
 tplanet = Teff.*(1.0-albedo)^.25.*sqrt(0.5*rstar.*RSUN./semi)
+# compute sound speed:
+cs = sqrt(5./3.*BOLTZMANN*tplanet./(MHYDROGEN*2.3))
+# escape speed:
+vesc = sqrt(GRAV*MEARTH*mass./(radius*REARTH))
+# ratio
+ratio = vesc./cs
 
 nplanet = length(mass)
 irv =[]
@@ -50,21 +57,21 @@ fig,ax = subplots()
 logf = log10(flux)
 fnorm = (logf-1)/3
 colormapname = "RdYlBu_r"
-ax[:errorbar](mass[irv],radius[irv],xerr=sM1[irv],yerr=sR1[irv],c="b",alpha=1.00,fmt=".")
-sc = ax[:scatter](mass,radius,c=logf,alpha=1,cmap=colormapname)
+#ax[:errorbar](ratio[irv],density[irv],xerr=sM1[irv],yerr=sR1[irv],c="b",alpha=1.00,fmt=".")
+sc = ax[:scatter](ratio,density,c=logf,alpha=1,cmap=colormapname)
 fig[:colorbar](sc,label="log_10(Flux [F_earth])")
-ax[:scatter](mass[irv],radius[irv],c=fnorm[irv],alpha=1.00,label = "RV",s=200,cmap=colormapname)
-ax[:errorbar](mass[irv1],radius[irv1],xerr=sM1[irv1],yerr=sR1[irv1],c="b",alpha=1.00,fmt=".")
+ax[:scatter](ratio[irv],density[irv],c=fnorm[irv],alpha=1.00,label = "RV",s=200,cmap=colormapname)
+#ax[:errorbar](ratio[irv1],density[irv1],xerr=sM1[irv1],yerr=sR1[irv1],c="b",alpha=1.00,fmt=".")
 #sc = ax[:scatter](mass[irv1],radius[irv1],c=fnorm[irv1],alpha=1.00,marker="^",label = "RV single",s=200,cmap=colormapname) #,s=mult[irv1]*50.)
-ax[:scatter](mass[irv1],radius[irv1],c=logf[irv1],alpha=1.00,marker="^",label = "RV single",s=200,cmap=colormapname) #,s=mult[irv1]*50.)
+ax[:scatter](ratio[irv1],density[irv1],c=logf[irv1],alpha=1.00,marker="^",label = "RV single",s=200,cmap=colormapname) #,s=mult[irv1]*50.)
 ax[:set_xscale]("log")
 ax[:set_yscale]("log")
-ax[:errorbar](mass[ittv],radius[ittv],xerr=sM1[ittv],yerr=sR1[ittv],c="b",alpha=1.,fmt=".")
-ax[:scatter](mass[ittv],radius[ittv],c=fnorm[ittv],alpha=1.0,marker = "s",label="TTV",s=200,cmap=colormapname)
-
-ax[:set_title]("Planet radius versus mass ")
-ax[:axis]([0.5,25.,1,12])
+#ax[:errorbar](ratio[ittv],density[ittv],xerr=sM1[ittv],yerr=sR1[ittv],c="b",alpha=1.,fmt=".")
+ax[:scatter](ratio[ittv],density[ittv],c=fnorm[ittv],alpha=1.0,marker = "s",label="TTV",s=200,cmap=colormapname)
+ax[:plot]([6.,6.],[1e-3,1e3])
+ax[:set_title]("Density vs. v_esc/c_s")
+#ax[:axis]([0.5,25.,1,12])
 #ax[:set_xlabel]("Flux/(Solar Constant)")
-ax[:set_xlabel]("Mass [M_earth]")
-ax[:set_ylabel]("Radius [R_earth]")
+ax[:set_xlabel]("v_esc/c_s")
+ax[:set_ylabel]("density [g/cc]")
 ax[:legend](loc="upper left")

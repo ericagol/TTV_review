@@ -1,0 +1,3 @@
+backend: MacOSX
+text.usetex: True
+mathtext.fontset: stix

@@ -41,7 +41,7 @@ end
 fig,ax = subplots()
 #fig,ax = figure()
 
-logf = log10(flux)
+logf = log10.(flux)
 fnorm = (logf-1)/3
 colormapname = "RdYlBu_r"
 ax[:errorbar](mass[irv],radius[irv],xerr=sM1[irv],yerr=sR1[irv],c="b",alpha=1.00,fmt=".")
@@ -57,7 +57,7 @@ ax[:errorbar](mass[ittv],radius[ittv],xerr=sM1[ittv],yerr=sR1[ittv],c="b",alpha=
 ax[:scatter](mass[ittv],radius[ittv],c=fnorm[ittv],alpha=1.0,marker = "s",label="TTV",s=200,cmap=colormapname)
 
 ax[:set_title]("Planet radius versus mass ")
-ax[:axis]([0.5,25.,1,12])
+ax[:axis]([0.2,25.,0.5,12])
 #ax[:set_xlabel]("Flux/(Solar Constant)")
 ax[:set_xlabel]("Mass [M_earth]")
 ax[:set_ylabel]("Radius [R_earth]")
